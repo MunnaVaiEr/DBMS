@@ -1,0 +1,11 @@
+create database Ncit;
+create  table employee(eid int, ename char(30), job char(30), salary int);
+insert table employee values(1, 'sushan', 'developer',1000);
+insert into employee values(2,'sampurnna','designer',1001),(3,'Munna','ethical_Hacker',10001);
+update employee SET salary=25000 where job='ethical_hacker';
+select * from employee;
+SELECT ename, job FROM employee;
+delete from employee WHERE job='designer';
+SELECT * from employee WHERE job='developer';
+select DISTINCT job from employee;
+SELECT ename, job from employee where salary>=20000;
