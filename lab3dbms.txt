@@ -1,0 +1,26 @@
+SELECT * FROM employee;					//update employee set country='japan' where ename='sushan';
+							//alter table employee add city char(30);
+SELECT ename,job FROM employee;
+ select * from employee where country='germany' and salary>=20000;
+select ename, country, job, salary from employee where job='programmer' or job= 'manager';
+select * from employee where country='germany' and city='berlin' or city='munich';
+select * from employee ORDER BY salary DESC;
+select * from  employee where ename like'j%';
+select * from  employee where country like'%y';
+select * from  employee where country like'%e%';
+select * from  employee where country NOT like '%LAND%';
+
+
+SELECT * FROM employee WHERE City LIKE '_erlin';
+SELECT * FROM employee WHERE City LIKE 'i_n_on';
+SELECT * FROM employee WHERE city LIKE '[bmd]%';
+SELECT * FROM employee WHERE city LIKE '[abc]%';
+select * from employee where city NOT like 'b%' and 'm%' and 'd%';
+select * from employee where city in('delhi','manchester');
+SELECT * FROM employee WHERE salary between 20000 and 35000;
+SELECT * FROM employee WHERE salary between 10000 and 40000 and e_id not in(1,2,3);
+SELECT * FROM employee WHERE city between 'b' and 'm';
+SELECT * FROM employee WHERE city NOT between 'b' and 'm';
+
+
+
