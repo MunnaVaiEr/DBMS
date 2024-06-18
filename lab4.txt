@@ -19,6 +19,7 @@ where salary>some(SELECT salary from employee WHERE did=1);
 SELECT customer.cid,name,amount,odate from customer INNER JOIN oorder ON customer.cid=oorder.cid;
 SELECT customer.cid,name,amount,odate from customer LEFT JOIN oorder ON customer.cid=oorder.cid;
 SELECT customer.cid,name,amount,odate from customer Right JOIN oorder ON customer.cid=oorder.cid;
+SELECT customer.cid,name,amount,odate from customer LEFT JOIN oorder ON customer.cid=oorder.cid UNION SELECT customer.cid,name,amount,odate from customer Right JOIN oorder ON customer.cid=oorder.cid
 
                        
                        
