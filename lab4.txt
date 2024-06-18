@@ -1,0 +1,24 @@
+create table customer( cid int, name varchar(30), age int, address varchar(30), salary float);
+insert into customer values(1,'ram',32,'kathmandu',2000.00),(2,'shyam',25,'patan',1500.00),(3,'hari',23,'dharan',2000.00),(4,'gopal',25,'pokhara',6500.00),(5,'sita',27,'bhaktapur',8500.00),(6,'gita',22,'ilam',4500.00),(7,'rita',24,'banepa',10000.00);
+
+create table order( oid int,odate timestamp, cid int ,amount int);
+INSERT into oorder VALUES(102,"2015-10-08",3,3000),(100,"2014-10-08",3,1500),(101,"2014-11-20",2,1560),(103,"2013-05-20",4,2060);
+
+CREATE TABLE employee(eid int, ename varchar(30), job varchar(30), did int, salary float);
+INSERT into employee VALUES(1,'arjun','AP',1 ,10000.00),(2,'rabi','JP',2, 12000.00),(3,'rohan','AP',2, 15000.00),(4,'krishna','AP',1, 20000.00);
+
+SELECT ename from employee
+WHERE salary>(SELECT min(salary) from employee) and job like "J%";
+
+SELECT * from employee
+WHERE job IN(SELECT job from employee WHERE ename='arjun');
+
+SELECT * from employee
+where salary>some(SELECT salary from employee WHERE did=1);
+
+SELECT customer.cid,name,amount,odate from customer INNER JOIN oorder ON customer.cid=oorder.cid;
+SELECT customer.cid,name,amount,odate from customer LEFT JOIN oorder ON customer.cid=oorder.cid;
+SELECT customer.cid,name,amount,odate from customer Right JOIN oorder ON customer.cid=oorder.cid;
+
+                       
+                       
