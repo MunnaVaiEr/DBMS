@@ -1,0 +1,18 @@
+create view employee_view AS SELECT * from employee where job="AP";
+SELECT * FROM `employee_view`;
+
+create VIEW munna AS SELECT ename, salary, did from employee WHERE salary>10000
+SELECT ename, salary,did from munna;
+
+CREATE view Aakelo AS SELECT name,age, odate, amount from customer,oorder WHERE customer.cid=oorder.cid;
+SELECT * from Aakelo
+
+ALTER view aakelo AS SELECT name,age, odate, amount,address,salary from customer,oorder WHERE customer.cid=oorder.cid
+SELECT * from Aakelo
+
+ALTER view aakelo AS SELECT name,age, odate, amount,address,salary from customer,oorder WHERE customer.cid=oorder.cid and salary>5000;
+SELECT * from Aakelo
+
+drop view munna
+
+
