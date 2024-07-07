@@ -1,0 +1,19 @@
+create database ncit;
+create table employee(eid int primary key,ename char(30) not null, address varchar(40),did int);
+
+create table departmentt(did int primary key, dname char(30));
+
+alter table employee add constraint fk_td foreign key(did) references departmentt(did);
+
+
+
+INSERT INTO employee 
+VALUES (3, 'munna', 'ktm', 1),(1, 'bijay', 'mhr', 2),(2, 'sushan', 'dharan', 23);
+
+update employee set ename='ram' where edi=1;
+
+delete from employee where eid=2;
+
+select ename
+from employee
+where ename like 'a%'
