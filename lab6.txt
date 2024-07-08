@@ -2,7 +2,7 @@ CREATE TABLE works( emp_name varchar(30), companyname varchar(30), salary float)
 insert into works values('sampurnna', 'fcb', 10000)
 insert into works values('sushan', 'pcb', 15000),('Munna', 'MP_tech', 101000);
 
-SELECT companyname FROM works group BY companyname HAVING AVG(salary)>12000
+//SELECT companyname FROM works group BY companyname HAVING AVG(salary)>12000//
 
 SELECT companyname FROM works group BY companyname HAVING AVG(salary)>(SELECT AVG(salary) from works WHERE companyname='fcb')
 
